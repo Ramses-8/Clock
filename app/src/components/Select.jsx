@@ -16,7 +16,11 @@ function Select({ onChange }) {
 
     const handleChange = (event) => {
         const id = event.target.value;
-        onChange([cities[id - 1].continent, cities[id - 1].city_name])
+        const city = {
+            continent: cities[id - 1].continent,
+            name: cities[id - 1].city_name            
+        }
+        onChange(city);
     }
 
     return (
